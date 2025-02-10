@@ -4,7 +4,7 @@
 
 environment.systemPackages = with pkgs; [
   python3
-  pyqt6
+  (python3.withPackages (ps: with ps; [ pyqt6 ]))
   xorg.libxcb
   xorg.libxkbcommon
   xorg.xcbutil

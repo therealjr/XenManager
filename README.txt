@@ -4,9 +4,10 @@
 
 environment.systemPackages = with pkgs; [
   python3
+  (python3.withPackages (ps: with ps; [ pip ]))
   (python3.withPackages (ps: with ps; [ pyqt6 ]))
   xorg.libxcb
-  xorg.libxkbcommon
+  libxkbcommon
   xorg.xcbutil
   xorg.xcbutilimage
   xorg.xcbutilwm
